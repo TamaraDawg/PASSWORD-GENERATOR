@@ -1,2 +1,1 @@
-# PASSWORD-GENERATOR
-Secure Password Generator!
+# Password Generator Starter Code
