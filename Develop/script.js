@@ -10,6 +10,19 @@ function generatePassword() {
 var numChar = ["0","1","2","3","4","5","6","7","8","9"]
 var specialChar = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?", "/", "-", ":", ";", "[", "]", "{", "}", ".", "<", ">", "=", "_", "`", "|", "~"];
 
+function passChoice () {
+  let passwordLength = parseInt(
+    prompt("How many characters would you like to use? (between 8-128)")
+  );
+}
+
+if (passwordLength > 7 && passwordLength < 129) {
+  let upper = confirm("Would you like to use UPPERCASE letters?");
+  let lower = confirm("Would you like to use lowercase letters?");
+  let num = confirm("Would you like to use numb3rs?");
+  let special = confirm("Would you like to use $peci@l Char@cters!?");
+}
+
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
