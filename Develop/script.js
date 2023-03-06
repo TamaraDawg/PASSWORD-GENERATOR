@@ -32,19 +32,19 @@ return "";
 //includes user options, if selected
 var charSet = "";
 if (lower) {
-  charSet += lowerCaseLetters.join()
+  charSet += lowerCaseLetters.join("")
 }
 if (upper) {
-  charSet += upperCaseLetters.join()
+  charSet += upperCaseLetters.join("")
 }
 if (num) {
-  charSet += numChar.join()
+  charSet += numChar.join("")
 }
 if (special) {
-  charSet += specialChar.join()
+  charSet += specialChar.join("")
 }
 //sets the length to suit
-var password
+var password = "";
   for (var i = 0; i < passwordLength; i++) {
     password += charSet.charAt(Math.floor(Math.random()* charSet.length))
   }
