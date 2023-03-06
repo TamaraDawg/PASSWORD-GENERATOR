@@ -32,21 +32,21 @@ return "";
 //includes user options, if selected
 var charSet = "";
 if (lower) {
-  charSet += lowerCaseLetters
+  charSet += lowerCaseLetters.join()
 }
 if (upper) {
-  charSet += upperCaseLetters
+  charSet += upperCaseLetters.join()
 }
 if (num) {
-  charSet += numChar
+  charSet += numChar.join()
 }
 if (special) {
-  charSet += specialChar
+  charSet += specialChar.join()
 }
 //sets the length to suit
 var password
   for (var i = 0; i < passwordLength; i++) {
-    password += charSet.charAt(Math.floor(Math.random()* charSet.passwordLength))
+    password += charSet.charAt(Math.floor(Math.random()* charSet.length))
   }
 return password;
 }
