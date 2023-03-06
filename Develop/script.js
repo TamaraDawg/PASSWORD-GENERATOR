@@ -29,7 +29,22 @@ if (!lower && !upper && !num && !special) {
 }
 }
 
-
+//includes user options, if selected
+var charSet = "";
+if (lower) {
+  charSet += lowerCaseLetters
+}
+if (upper) {
+  charSet += upperCaseLetters
+}
+if (num) {
+  charSet += numChar
+}
+if (special) {
+  charSet += specialChar
+}
+//sets the length to suit
+var password
   
 
 // Get references to the #generate element
