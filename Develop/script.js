@@ -26,7 +26,7 @@ var special = confirm("Do you want to use $peci@l Ch@racters?");
 //if at least one of the options is not chosen:
 if (!lower && !upper && !num && !special) {
   alert("You didn't choose a character set! Sorry, No Password can be Generated.")
-}
+return "";
 }
 
 //includes user options, if selected
@@ -45,8 +45,11 @@ if (special) {
 }
 //sets the length to suit
 var password
-  
-
+  for (var i = 0; i < passwordLength; i++) {
+    password += charSet.charAt(Math.floor(Math.random()* charSet.passwordLength))
+  }
+return password;
+}
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
