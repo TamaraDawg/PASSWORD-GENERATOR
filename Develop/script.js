@@ -13,17 +13,21 @@ const specialChar = ["!", "@", "#", "$", "%", "^", "&", "*", "(", ")", "+", "?",
 //prompt function and returning new password function.
 function generatePassword() {
 var passwordLength = prompt("How many characters do you want your password to have? (8-128)");
-while (passwordLength < 8 || lpasswordLength > 128) {
+while (passwordLength < 8 || passwordLength > 128) {
+  //if user does not write a number between 8 or 128
   alert("Sorry, Please choose a number BETWEEN 8 and 128.");
   passwordLength = prompt("How many characters do you want your password to have? (8-128)");
 }
-
+//after choosing length, the user will be asked if they would like to use certain characteristics
 var lower = confirm("Do you want to use lowercase letters?");
 var upper = confirm("Do you want to use UPPERCASE letters?");
 var num =  confirm("Do you want to use numb3rs?");
 var special = confirm("Do you want to use $peci@l Ch@racters?");
-
-//
+//if at least one of the options is not chosen:
+if (!lower && !upper && !num && !special) {
+  alert("You didn't choose a character set! Sorry, No Password can be Generated.")
+}
+}
 
 
   
